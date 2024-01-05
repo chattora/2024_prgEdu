@@ -1,0 +1,125 @@
+h1 {
+ font-size: 50px;
+ top: 20px;
+ text-align: center;
+
+}
+/*チェックボックスを消す*/
+.checkbox{
+  display: none;
+}
+ 
+/*アコーディオンの大きさと位置調整*/
+.accordion{
+  width: 600px;
+  top: 50px;
+  margin: 0 auto 20px;
+  position: relative;
+
+}
+ 
+/*アコーディオンのラベルの設定*/
+.accordion dt{
+  background-color: #4933a3;
+}
+ 
+.accordion dt label{
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  color: #ffffff;
+  cursor: pointer;
+}
+ 
+/*ラベル内の矢印の設定*/
+.accordion dt label::after{
+  content:'';
+  display: block;
+  border-left:7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 10px solid #ffffff;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(0,-50%);
+  transition:.4s .4s;
+}
+ 
+/*表示される要素の基本設定*/
+.accordion dd{
+  height: 0;
+  transition:.4s;
+  overflow: hidden;
+  padding: 0 20px;
+  margin: auto;
+  border: solid 2px transparent;
+}
+/*強制的にスペシャルに*/ 
+.accordion dt label[for="accordion5"]
+{
+  background-color: #ea1404;
+}
+/*ラベル内の矢印のアニメーション設定*/
+.checkbox:checked ~ dl dt label::after{
+  transform: translate(0,-50%) rotate(-180deg);  
+}
+ 
+/*表示される要素のアニメーション設定*/
+.checkbox:checked ~ dl dd{
+  height: auto;
+  padding: 10px 20px;
+  border: solid 2px #d3d6ff;
+}
+
+.container {
+  position: relative;
+  top: 20px;
+  width: 800px;
+  height: 600px;
+  font-size: 20px;
+  margin: auto;
+  background: #e3e8e9;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+
+}
+.ex_container {
+  position: relative;
+  top: 100px;
+  width: 800px;
+  height: 600px;
+  font-size: 20px;
+  margin: auto;
+  background: #e3e8e9;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+
+}
+
+.shougou {
+  position: relative;
+  top: 20px;
+  width: 800px;
+  height: 60%;
+  font-size: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  background: #05c6ecb2;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.monopass_link{
+  position: relative;
+  font-size: 30px;
+  top: 20px;
+  text-align: center;
+}
+.hissu_link{
+  position: relative;
+  font-size: 30px;
+  top: 20px;
+  left: 400px;
+}
