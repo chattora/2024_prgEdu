@@ -1,71 +1,73 @@
 h1 {
- font-size: 50px;
- top: 20px;
- text-align: center;
+  font-size: 50px;
+  top: 20px;
+  text-align: center;
 
 }
+
 /*チェックボックスを消す*/
-.checkbox{
+.checkbox {
   display: none;
 }
- 
+
 /*アコーディオンの大きさと位置調整*/
-.accordion{
+.accordion {
   width: 600px;
   top: 50px;
   margin: 0 auto 20px;
   position: relative;
 
 }
- 
+
 /*アコーディオンのラベルの設定*/
-.accordion dt{
+.accordion dt {
   background-color: #4933a3;
 }
- 
-.accordion dt label{
+
+.accordion dt label {
   position: relative;
   display: block;
   padding: 10px 20px;
   color: #ffffff;
   cursor: pointer;
 }
- 
+
 /*ラベル内の矢印の設定*/
-.accordion dt label::after{
-  content:'';
+.accordion dt label::after {
+  content: '';
   display: block;
-  border-left:7px solid transparent;
+  border-left: 7px solid transparent;
   border-right: 7px solid transparent;
   border-top: 10px solid #ffffff;
   position: absolute;
   top: 50%;
   right: 20px;
-  transform: translate(0,-50%);
-  transition:.4s .4s;
+  transform: translate(0, -50%);
+  transition: .4s .4s;
 }
- 
+
 /*表示される要素の基本設定*/
-.accordion dd{
+.accordion dd {
   height: 0;
-  transition:.4s;
+  transition: .4s;
   overflow: hidden;
   padding: 0 20px;
   margin: auto;
   border: solid 2px transparent;
 }
-/*強制的にスペシャルに*/ 
-.accordion dt label[for="accordion5"]
-{
+
+/*強制的にスペシャルに*/
+.accordion dt label[for="accordion5"] {
   background-color: #ea1404;
 }
+
 /*ラベル内の矢印のアニメーション設定*/
-.checkbox:checked ~ dl dt label::after{
-  transform: translate(0,-50%) rotate(-180deg);  
+.checkbox:checked~dl dt label::after {
+  transform: translate(0, -50%) rotate(-180deg);
 }
- 
+
 /*表示される要素のアニメーション設定*/
-.checkbox:checked ~ dl dd{
+.checkbox:checked~dl dd {
   height: auto;
   padding: 10px 20px;
   border: solid 2px #d3d6ff;
@@ -84,6 +86,7 @@ h1 {
   border-radius: 8px;
 
 }
+
 .ex_container {
   position: relative;
   top: 100px;
@@ -111,13 +114,14 @@ h1 {
   text-align: center;
 }
 
-.monopass_link{
+.monopass_link {
   position: relative;
   font-size: 30px;
   top: 20px;
   text-align: center;
 }
-.hissu_link{
+
+.hissu_link {
   position: relative;
   font-size: 30px;
   top: 20px;
